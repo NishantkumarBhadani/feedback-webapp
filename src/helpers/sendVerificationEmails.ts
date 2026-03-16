@@ -10,7 +10,7 @@ export async function sendVerificationEmails(
         try {
             await resend.emails.send({
                 from:'onboarding@resend.com',
-                to:'email',
+                to: email,
                 subject:'feedback-wepapp | Verification code',
                 react: VerificationEmail({username,otp:verifyCode}),
             });
